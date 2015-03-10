@@ -2,7 +2,7 @@
 
 # config plugins.sbt
 
-    addSbtPlugin("com.baidu" % "xsbt-profile" % "1.0.0")
+    addSbtPlugin("com.scalaone" % "xsbt-profile" % "1.1.0")
 
 # build.sbt config
 
