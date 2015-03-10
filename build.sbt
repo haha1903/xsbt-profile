@@ -1,13 +1,18 @@
-version := "1.1.0-SNAPSHOT"
+version := "1.1.0"
 
 sbtPlugin := true
 
 name := "xsbt-profile"
 
-organization := "com.baidu"
+organization := "com.scalaone"
 
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
-publishTo := Some("ma03" at "http://cq01-testing-ma03.vm.baidu.com:8304/archiva/repository/ma/")
+publishTo := {
+  if (isSnapshot.value)
+    Some("snapshots" at "https://oss.sonatype.org/content/repositories/snapshots")
+  else
+    Some("releases" at "https://oss.sonatype.org/service/local/staging/deploy/maven2")
+}
 
-credentials += Credentials("Repository Archiva Managed ma Repository", "cq01-testing-ma03.vm.baidu.com", "admin", "!@34QWer")
+credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
