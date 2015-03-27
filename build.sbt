@@ -1,4 +1,4 @@
-version := "1.2.0-SNAPSHOT"
+version := "1.1.1"
 
 sbtPlugin := true
 
@@ -16,3 +16,23 @@ publishTo := {
 }
 
 credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
+
+pomExtra := <url>https://github.com/scalaone/xsbt-profile</url>
+  <licenses>
+    <license>
+      <name>BSD-style</name>
+      <url>http://www.opensource.org/licenses/bsd-license.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>git@github.com:scalaone/xsbt-profile.git</url>
+    <connection>scm:git:git@github.com:scalaone/xsbt-profile.git</connection>
+  </scm>
+  <developers>
+    <developer>
+      <id>haha1903</id>
+      <name>haha1903</name>
+      <url>http://scalaone.com</url>
+    </developer>
+  </developers>
