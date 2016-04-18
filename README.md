@@ -2,16 +2,18 @@
 
 # config plugins.sbt
 
-    addSbtPlugin("com.scalaone" % "xsbt-profile" % "1.1.1")
+    addSbtPlugin("com.scalaone" % "xsbt-profile" % "1.2.0")
 
 # build.sbt config
 
-    import sbtprofile.Plugin._
-
-    seq(profileSettings: _*)
-
+    enablePlugins(ProfilePlugin)
 
 # Change log
+
+## Release 1.2.0
+
+     rename Plugin to ProfilePlugin
+     change to sbt AutoPlugin
 
 ## Release 1.1.1
 
